@@ -1,0 +1,42 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "EPI Manager",
+        "contact": {
+            "email": "robson.stun@hotmail.com"
+        },
+        "version": "1.2"
+    },
+    "servers": [
+        {
+            "url": "/api"
+        }
+    ],
+    "paths": {
+        "/v1/colaboradores/{id}": {
+            "get": {
+                "tags": [
+                    "Colaborador"
+                ],
+                "summary": "Obter um determinado colaborador",
+                "description": "Obter um determinado colaborador",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Id do colaborador",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        }
+    }
+}
