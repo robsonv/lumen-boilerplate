@@ -12,5 +12,17 @@
 */
 
 $router->get('/', function () use ($router) {
-    return $router->app->version();
+    return redirect('api/documentation');
+});
+
+$router->group(['prefix' => 'api/v1'], function () use ($router) {
+
+    // Collabotors Endpoints
+    $router->group(['prefix' => 'collaborators'], function () use ($router) {
+
+        $router->get('/{id}', 'CollaboratorController@get');
+        $router->get('/', 'CollaboratorController@list');
+        $router->post('/', 'CollaboratorController@create');
+        $router->delete('/{id}', 'CollaboratorController@delete');
+    });
 });

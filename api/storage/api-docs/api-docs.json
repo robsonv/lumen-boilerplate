@@ -13,13 +13,14 @@
         }
     ],
     "paths": {
-        "/v1/colaboradores/{id}": {
+        "/v1/collaborators/{id}": {
             "get": {
                 "tags": [
-                    "Colaborador"
+                    "Collaborators"
                 ],
                 "summary": "Obter um determinado colaborador",
                 "description": "Obter um determinado colaborador",
+                "operationId": "App\\Http\\Controllers\\CollaboratorController::get",
                 "parameters": [
                     {
                         "name": "id",
@@ -34,6 +35,85 @@
                 "responses": {
                     "200": {
                         "description": "OK"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "Collaborators"
+                ],
+                "summary": "Remover uma determinada reserva",
+                "description": "Remover uma determinada reserva",
+                "operationId": "App\\Http\\Controllers\\CollaboratorController::delete",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Id da reserva",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        },
+        "/v1/collaborators": {
+            "get": {
+                "tags": [
+                    "Collaborators"
+                ],
+                "summary": "Obter colaboradores",
+                "description": "Obter uma lista de colaboradores",
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Collaborators"
+                ],
+                "summary": "Cria reserva",
+                "description": "criar uma reserva",
+                "operationId": "App\\Http\\Controllers\\CollaboratorController::create",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+                                    "id_colaborador": {
+                                        "description": "Cria reserva",
+                                        "type": "string",
+                                        "example": "1"
+                                    },
+                                    "id_equipamento": {
+                                        "description": "Cria reserva",
+                                        "type": "string",
+                                        "example": "1"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": "Created"
+                    },
+                    "422": {
+                        "description": "Validation concern"
+                    },
+                    "500": {
+                        "description": "Internal server error"
                     }
                 }
             }
