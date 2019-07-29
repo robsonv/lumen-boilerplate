@@ -2,12 +2,16 @@
 
 Versão do Lumen `5.8`\
 Versão do Swaggler `OAS3`\
-Padrao de código `PSR-2`
+Padrao de código `PSR-2`\
+PHP `7.3`
 
 ## Testes
 
-Nomenclatura dos metodos com o padrao `snake case`
+* Nomenclatura dos metodos com o padrao `snake case`\
+* Banco separado para testes
+* Limpar banco após execução de testes.
 
+Rodar testes
 ```bash
 # Rodar todos os testes
 php vendor/bin/phpunit
