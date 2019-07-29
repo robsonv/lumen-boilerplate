@@ -1,28 +1,30 @@
 # Lumen-Boilerplate
 
-Versão do Lumen `5.8`
-Versão do Swaggler `OAS3`
+Versão do Lumen `5.8`\
+Versão do Swaggler `OAS3`\
+Padrao de código `PSR-2`
 
-## Testing
+## Testes
 
-It's *probably* a good idea to test your code. Lumen Boilerplate comes with tests to show you the way.
+Nomenclatura dos metodos com o padrao `snake case`
 
 ```bash
-# Run all tests.
+# Rodar todos os testes
 php vendor/bin/phpunit
 
-# Run only unit tests.
-php vendor/bin/phpunit --testsuite Unit
+# Rodar teste somente para um arquivo
+php vendor/bin/phpunit --filter CollaboratorTest
 
-# Run only integration tests.
-php vendor/bin/phpunit --testsuite Integration
+# Rodar teste somente para um determinado método.
+php vendor/bin/phpunit --filter should_return_collaborator_collection
 
-# Run only tests within a given file.
-php vendor/bin/phpunit tests/Integration/UserControllerTest.php
-
-# Run only a given test method.
-php vendor/bin/phpunit --filter user_can_read_his_own_data
-
-# You can also do both.
-php vendor/bin/phpunit tests/Integration/UserControllerTest.php --filter user_can_read_his_own_data
 ```
+
+## RoadMap
+
+* [andersao/l5-repository](https://github.com/andersao/l5-repository)
+* [thephpleague/fractal](https://github.com/thephpleague/fractal)
+* [spatie/laravel-permission](https://github.com/spatie/laravel-permission)
+* [barryvdh/laravel-cors](https://github.com/barryvdh/laravel-cors)
+* [mpociot/laravel-apidoc-generator](https://github.com/mpociot/laravel-apidoc-generator)
+* coverage
