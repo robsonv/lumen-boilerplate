@@ -77,7 +77,7 @@
                 "tags": [
                     "Collaborators"
                 ],
-                "summary": "Cria reserva",
+                "summary": "create collaborator",
                 "description": "criar uma reserva",
                 "operationId": "App\\Http\\Controllers\\CollaboratorController::create",
                 "requestBody": {
@@ -87,7 +87,7 @@
                             "schema": {
                                 "properties": {
                                     "name": {
-                                        "description": "Cria reserva",
+                                        "description": "create collaborator",
                                         "type": "string",
                                         "example": "João da Silva"
                                     }

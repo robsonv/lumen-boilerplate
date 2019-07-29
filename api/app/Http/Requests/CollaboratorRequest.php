@@ -2,8 +2,6 @@
 
 namespace App\Http\Requests;
 
-use Error;
-
 class CollaboratorRequest
 {
     /**

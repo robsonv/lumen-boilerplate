@@ -8,7 +8,6 @@ use App\Services\CollaboratorService;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 
-
 class CollaboratorController extends Controller
 {
     /**
@@ -29,7 +28,7 @@ class CollaboratorController extends Controller
     }
 
     /**
-     * Obter um determinado colaborador
+     * get collaborator
      *
      * @param string $id
      * @return Response
@@ -58,7 +57,7 @@ class CollaboratorController extends Controller
     }
 
     /**
-     * Obter colaboradores
+     * get all collaborators
      *
      * @return Response
      *
@@ -82,7 +81,7 @@ class CollaboratorController extends Controller
      *
      * @OA\Post(
      *     path="/v1/collaborators",
-     *     description="criar uma reserva",
+     *     description="criar um colaborador",
      *     tags={"Collaborators"},
      *
      *     @OA\RequestBody(
@@ -107,14 +106,14 @@ class CollaboratorController extends Controller
     }
 
     /**
-     * Remover uma determinada reserva
+     * delete collaborator
      *
      * @param string $id
      * @return Response
      *
      * @OA\Delete(
      *      path="/v1/collaborators/{id}",
-     *      description="Remover uma determinada reserva",
+     *      description="Remover um determinado colaborador",
      *      tags={"Collaborators"},
      *
      *      @OA\Parameter(
