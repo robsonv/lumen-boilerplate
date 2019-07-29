@@ -1,6 +1,7 @@
 # Lumen-Boilerplate
 
-Verão do Lumen `5.8`
+Versão do Lumen `5.8`
+Versão do Swaggler `OAS3`
 
 ## Testing
 
