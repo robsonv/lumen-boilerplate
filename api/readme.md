@@ -1,5 +1,7 @@
 # Lumen-Boilerplate
 
+Verão do Lumen `5.8`
+
 ## Testing
 
 It's *probably* a good idea to test your code. Lumen Boilerplate comes with tests to show you the way.
