@@ -62,12 +62,12 @@ class Handler extends ExceptionHandler
             }
         }
 
-        /*if ($this->isDebugMode()) {
+        if ($this->isDebugMode()) {
             $response['debug'] = [
                 'exception' => get_class($exception),
-                'trace' => $exception->getTrace()
+                //'trace' => $exception->getTrace()
             ];
-        }*/
+        }
 
         return response()->json(['error' => $response], $response['status']);
     }

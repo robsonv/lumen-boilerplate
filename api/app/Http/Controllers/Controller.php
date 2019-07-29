@@ -10,11 +10,8 @@ class Controller extends BaseController
      * @SWG\Swagger(
      *      schemes={"http", "https"},
      *      @OA\Info(
-     *          title="EPI Manager",
-     *          version="1.2",
-     *          @OA\Contact(
-     *              email="robson.stun@hotmail.com"
-     *          )
+     *          title="Lumen-boilerplate",
+     *          version="1.0",
      *      ),
      *
      * ),

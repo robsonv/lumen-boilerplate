@@ -13,11 +13,11 @@ class CreateCollaboratorsTable extends Migration
      */
     public function up()
     {
-        /*Schema::create('collaborators', function (Blueprint $table) {
+        Schema::create('collaborators', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('nome');
+            $table->string('name');
             $table->timestamps();
-        });*/
+        });
     }
 
     /**

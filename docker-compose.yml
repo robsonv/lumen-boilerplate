@@ -1,6 +1,6 @@
 version: "3"
 services:
-  mysql:
+  mysql2:
     image: mysql:5.7
     restart: always
     container_name: db.lumen-boilerplate
@@ -8,14 +8,14 @@ services:
     volumes:
       - .:/application
     environment:
-      MYSQL_DATABASE: homestead
-      MYSQL_USER: homestead
-      MYSQL_PASSWORD: homestead
-      MYSQL_ROOT_PASSWORD: homestead
+      MYSQL_DATABASE: boilerplate
+      MYSQL_USER: boilerplate
+      MYSQL_PASSWORD: boilerplate
+      MYSQL_ROOT_PASSWORD: boilerplate
     networks:
       - app-network
     ports:
-      - "3300:3306"
+      - "3305:3306"
   webserver:
     image: nginx:alpine
     restart: always

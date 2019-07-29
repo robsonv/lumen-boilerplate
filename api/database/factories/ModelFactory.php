@@ -17,3 +17,12 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
         'email' => $faker->email,
     ];
 });
+
+$factory->define(App\Models\Collaborator::class, function (Faker\Generator $faker) {
+
+    $faker = Faker\Factory::create('pt_BR');
+
+    return [
+        'name' => $faker->name
+    ];
+});

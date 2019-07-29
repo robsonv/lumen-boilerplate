@@ -1,8 +1,9 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use App\Models\Collaborator;
 
-class DatabaseSeeder extends Seeder
+class CollaboratorsTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -11,6 +12,6 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        $this->call('CollaboratorsTableSeeder');
+        factory(Collaborator::class, 50)->create();
     }
 }

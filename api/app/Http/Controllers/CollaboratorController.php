@@ -3,9 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Http\Resources\CollaboratorResource;
+use App\Http\Requests\CollaboratorRequest;
 use App\Services\CollaboratorService;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
+
 
 class CollaboratorController extends Controller
 {
@@ -76,10 +78,7 @@ class CollaboratorController extends Controller
     }
 
     /**
-     * Cria reserva
-     *
-     * @param \Illuminate\Http\Request $request
-     * @return \Illuminate\Http\JsonResponse
+     * create collaborator
      *
      * @OA\Post(
      *     path="/v1/collaborators",
@@ -89,8 +88,7 @@ class CollaboratorController extends Controller
      *     @OA\RequestBody(
      *          required=true,
      *          @OA\JsonContent(
-     *              @OA\Property(property="id_colaborador", type="string", example="1"),
-     *              @OA\Property(property="id_equipamento", type="string", example="1"),
+     *              @OA\Property(property="name", type="string", example="João da Silva"),
      *          ),
      *     ),
      *
@@ -101,20 +99,17 @@ class CollaboratorController extends Controller
      */
     public function create(Request $request)
     {
-        /*$this->validate($request, [
-            'id_colaborador' => 'required',
-            'id_equipamento' => 'required',
-        ]);*/
+        $data  = $this->validate($request, CollaboratorRequest::createRules());
 
-        $collaborator = $this->collaborator_service->create($request);
+        $collaborator = $this->collaborator_service->create($data);
 
-        return response()->json($collaborator);
+        return response()->json(new CollaboratorResource($collaborator));
     }
 
     /**
      * Remover uma determinada reserva
      *
-     * @param int $id
+     * @param string $id
      * @return Response
      *
      * @OA\Delete(
